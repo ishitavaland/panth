@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vidja and Co.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #00bfa5;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            animation: slideDown 1s ease;
+        }
+        nav {
+            background-color: #00bfa5;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        nav a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+            bottom: -2px;
+            left: 0;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        nav a:hover::before {
+            background-color: #fff;
+            width: 100%;
+        }
+        section {
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 700;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+        footer {
+            background-color: #00bfa5;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            animation: slideUp 1s ease;
+        }
+        .particles-js-canvas-el {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vidja and Co.</h1>
+        <p>Your premier import and export partner</p>
+    </header>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#partners">Partners</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Vidja and Co. is a leading import and export company, specializing in cargo and ship transportation. We strive to provide efficient and reliable services to our clients worldwide.</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer a comprehensive range of services including:</p>
+        <ul>
+            <li>International cargo shipping</li>
+            <li>Customs clearance</li>
+            <li>Logistics management</li>
+            <li>Supply chain optimization</li>
+            <li>Warehousing solutions</li>
+            <li>Insurance services</li>
+            <li>Freight forwarding</li>
+            <li>Trade finance</li>
+            <li>Consulting services</li>
+            <li>Legal support</li>
+            <li>Quality control</li>
+            <li>Documentation</li>
+        </ul>
+    </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Check out some of our successful projects:</p>
+        <div class="animate__animated animate__fadeInUp">
+            <!-- Add your portfolio content here -->
+        </div>
+    </section>
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <p>See what our clients say about us:</p>
+        <div class="animate__animated animate__fadeInUp">
+            <!-- Add your testimonials content here -->
+        </div>
+    </section>
+    <section id="partners">
+        <h2>Partners</h2>
+        <p>Our trusted partners:</p>
+        <ul class="animate__animated animate__fadeInUp">
+            <li>Shipping carriers</li>
+            <li>Customs brokers</li>
+            <li>Warehousing providers</li>
+            <li>Logistics software companies</li>
+            <li>Trade associations</li>
+            <li>Legal advisors</li>
+            <li>Financial institutions</li>
+            <li>Technology providers</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>For inquiries and partnerships, please contact us at:</p>
+        <address class="animate__animated animate__fadeInUp">
+            Email: info@vidjaandco.com<br>
+            Phone: +1 (123) 456-7890<br>
+            Address: 123 Shipping Avenue, Shipping City, Shipping Country
+        </address>
+    </section>
+    <footer>
+        <p>&copy; 2024 Vidja and Co. All rights reserved.</p>
+    </footer>
+
+    <!-- Include the particles.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Configure particles.js -->
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
